@@ -1,0 +1,75 @@
+# Операционная система
+.DS_Store
+Thumbs.db
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# База данных
+*.sqlite3
+*.db
+
+# Миграции
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Лог-файлы
+*.log
+*.out
+*.err
+
+# Тестовые отчёты
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+.cache
+nosetests.xml
+coverage.xml
+*.lcov
+
+# IDE/Редакторы
+.vscode/
+.idea/
+*.iml
+*.sublime*
+
+# Django static и media файлы
+staticfiles/
+media/
+
+# Node.js (если используется)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Другие временные файлы
+*.swp
+*.bak
+*.tmp
+*.old
+*.orig
+*.save
+
+# Docker (если используется)
+*.pid
+*.sock
+.env.docker
+
+# Celery (если используется)
+celerybeat-schedule
+celerybeat.pid
+
+# Компиляция
+*.so
