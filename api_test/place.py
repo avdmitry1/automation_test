@@ -51,6 +51,20 @@ class TestNewLocation(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json().get("address"), "100 Shevchenko street, UKR")
 
+        print(response.json())
+
+    def test_4_delete_location(self):
+        self.assertIsNotNone(
+            self.__class__.place_id, "Place ID not set from previous test"
+        )
+        delete_resource = "/maps/api/place/delete/json"
+        json_data = {"place_id": self.__class__.place_id}
+        response = requests.delete(
+            self.base_url + delete_resource + self.key, json=json_data
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json().get("status"), "OK")
+        print('Location deleted')
 
 if __name__ == "__main__":
     unittest.main()
