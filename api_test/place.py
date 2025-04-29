@@ -1,6 +1,5 @@
 import requests
 import unittest
-import pprint as p
 
 
 class TestNewLocation(unittest.TestCase):
