@@ -64,7 +64,8 @@ class TestNewLocation(unittest.TestCase):
         )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json().get("status"), "OK")
-        print('Location deleted')
+        print("Location deleted")
+
 
 if __name__ == "__main__":
     unittest.main()
